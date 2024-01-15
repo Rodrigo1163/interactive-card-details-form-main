@@ -1,0 +1,474 @@
+main {
+  display: flex;
+  width: 100%;
+}
+
+.cards {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.cards .bg-card {
+  background-image: url("/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+.cards .card-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cards .card-front {
+  background-image: url("/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 300px;
+  margin-left: 20%;
+}
+.cards .card-front .circle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px;
+}
+.cards .card-front .circle .circleMedio {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+}
+.cards .card-front .circle .circleSmall {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.cards .card-front .number-card {
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 3px;
+  font-size: 28px;
+}
+.cards .card-front .nameVenc {
+  display: flex;
+  font-size: 24px;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.cards .card-back {
+  position: relative;
+  background-image: url("/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 300px;
+  margin-left: 40%;
+}
+.cards .card-back .number-cvc {
+  position: absolute;
+  right: 60px;
+  top: 122px;
+  font-size: 20px;
+}
+
+.container-formulario {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-formulario .formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  gap: 20px;
+}
+.container-formulario .formulario input {
+  height: 3em;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 4px;
+  padding-left: 10px;
+  outline: none;
+  font-size: 24px;
+}
+.container-formulario .formulario label {
+  font-size: 24px;
+  font-weight: 500;
+}
+.container-formulario .formulario button {
+  height: 3em;
+  width: 100%;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.container-formulario .formulario .container-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.container-formulario .formulario .expDate {
+  display: flex;
+  flex-direction: column;
+}
+.container-formulario .formulario .cvc {
+  display: flex;
+  flex-direction: column;
+}
+.container-formulario .formulario .cvc .input-cvc {
+  width: 100%;
+}
+.container-formulario .formulario .input-expDate {
+  display: flex;
+  gap: 8px;
+}
+.container-formulario .formulario .input-expDate .mes, .container-formulario .formulario .input-expDate .ano {
+  width: 110px;
+}
+
+.erro-text, .erroDate {
+  color: red;
+  font-size: 12px;
+}
+
+.containerErroDate {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .cards .card-front {
+    width: 380px;
+    height: 210px;
+    margin-left: 20%;
+  }
+  .cards .card-front .circle .circleMedio {
+    width: 50px;
+    height: 50px;
+  }
+  .cards .card-front .circle .circleSmall {
+    width: 30px;
+    height: 30px;
+  }
+  .cards .card-front .number-card {
+    font-size: 24px;
+  }
+  .cards .card-front .nameVenc {
+    font-size: 24px;
+  }
+  .cards .card-back {
+    width: 410px;
+    height: 210px;
+    margin-left: 35%;
+  }
+  .cards .card-back .number-cvc {
+    right: 75px;
+    top: 89px;
+    font-size: 23px;
+  }
+  .container-formulario .formulario {
+    max-width: 450px;
+  }
+  .container-formulario .formulario input {
+    font-size: 18px;
+  }
+  .container-formulario .formulario label {
+    font-size: 18px;
+  }
+  .container-formulario .formulario button {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1100px) {
+  .cards .card-front {
+    margin-left: 10%;
+  }
+  .cards .card-back {
+    margin-left: 20%;
+  }
+}
+@media (max-width: 1024px) {
+  .cards .card-front {
+    width: 300px;
+    height: 200px;
+  }
+  .cards .card-front .number-card {
+    font-size: 16px;
+  }
+  .cards .card-front .nameVenc {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .cards .card-back {
+    width: 300px;
+    height: 200px;
+  }
+  .cards .card-back .number-cvc {
+    right: 35px;
+    top: 72px;
+    font-size: 14px;
+  }
+  .container-formulario .formulario {
+    gap: 8px;
+    max-width: 300px;
+  }
+  .container-formulario .formulario input {
+    font-size: 14px;
+  }
+  .container-formulario .formulario label {
+    font-size: 14px;
+  }
+  .container-formulario .formulario button {
+    font-size: 14px;
+  }
+  .container-formulario .formulario .input-expDate .mes, .container-formulario .formulario .input-expDate .ano {
+    width: 60px;
+  }
+}
+@media (max-width: 992px) {
+  .cards .card-front {
+    margin-left: 50px;
+  }
+  .cards .card-back {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .cards .card-two {
+    gap: 20px;
+  }
+  .cards .card-front {
+    margin-left: 30px;
+    width: 250px;
+    height: 150px;
+  }
+  .cards .card-front .number-card {
+    letter-spacing: 0;
+    margin-top: 0;
+    font-size: 14px;
+  }
+  .cards .card-front .nameVenc {
+    margin: 10px 22px 0 22px;
+    font-size: 14px;
+    margin: 4px 28px 0 28px;
+  }
+  .cards .card-back {
+    margin-left: 60px;
+    width: 250px;
+    height: 150px;
+  }
+  .cards .card-back .number-cvc {
+    top: 59px;
+  }
+}
+@media (max-width: 630px) {
+  main {
+    flex-direction: column;
+  }
+  .cards {
+    width: 100vw;
+    height: 400px;
+  }
+  .cards .bg-card {
+    background-image: url("/interactive-card-details-form-main/images/bg-main-mobile.png");
+    width: 100%;
+    height: 200px;
+  }
+  .cards .card-two {
+    top: 30px;
+    align-items: center;
+    transform: translate(-50%, 0);
+    flex-direction: column-reverse;
+    gap: 0;
+    max-width: 80%;
+    width: 100%;
+  }
+  .cards .card-two .card-front {
+    margin-right: 120px;
+    margin-top: -106px;
+    z-index: 2;
+    width: 300px;
+    height: 200px;
+  }
+  .cards .card-two .card-front .number-card {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .cards .card-two .card-front .nameVenc {
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    margin: 14px 28px 0 28px;
+    font-weight: 300;
+  }
+  .cards .card-two .card-back {
+    margin-left: 50px;
+    z-index: 1;
+    width: 300px;
+    height: 200px;
+  }
+  .cards .card-two .card-back .number-cvc {
+    right: 45px;
+    top: 68px;
+    font-size: 20px;
+  }
+  .container-formulario {
+    width: 100vw;
+  }
+  .container-formulario .formulario {
+    gap: 10px;
+    max-width: 80%;
+    width: 100%;
+  }
+  .container-formulario .formulario input {
+    height: 3em;
+    font-size: 24px;
+  }
+  .container-formulario .formulario label {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .container-formulario .formulario button {
+    height: 3em;
+    margin-top: 1em;
+    font-size: 24px;
+  }
+  .container-formulario .formulario .input-expDate .mes, .container-formulario .formulario .input-expDate .ano {
+    width: 100px;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    flex-direction: column;
+  }
+  .cards {
+    width: 100vw;
+    height: 300px;
+  }
+  .cards .bg-card {
+    width: 100%;
+    height: 200px;
+  }
+  .cards .card-two {
+    top: 30px;
+    align-items: center;
+    transform: translate(-50%, 0);
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .cards .card-two .card-front {
+    margin-right: 100px;
+    margin-top: -72px;
+    z-index: 2;
+    width: 250px;
+    height: 150px;
+  }
+  .cards .card-two .card-front .circle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px;
+  }
+  .cards .card-two .card-front .circle .circleMedio {
+    width: 40px;
+    height: 40px;
+  }
+  .cards .card-two .card-front .circle .circleSmall {
+    width: 20px;
+    height: 20px;
+  }
+  .cards .card-two .card-front .number-card {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .cards .card-two .card-front .nameVenc {
+    font-size: 12px;
+    margin: 10px 22px 0 22px;
+  }
+  .cards .card-two .card-back {
+    margin-left: 50px;
+    z-index: 1;
+    width: 250px;
+    height: 150px;
+  }
+  .cards .card-two .card-back .number-cvc {
+    top: 58px;
+    right: 32px;
+    font-size: 14px;
+  }
+  .container-formulario {
+    width: 100vw;
+  }
+  .container-formulario .formulario {
+    gap: 10px;
+    max-width: 90%;
+    width: 100%;
+  }
+  .container-formulario .formulario input {
+    height: 3.5em;
+    font-size: 18px;
+  }
+  .container-formulario .formulario label {
+    font-size: 14px;
+  }
+  .container-formulario .formulario button {
+    height: 3.5em;
+    margin-top: 1em;
+    font-size: 18px;
+  }
+  .container-formulario .formulario .input-expDate .mes, .container-formulario .formulario .input-expDate .ano {
+    width: 80px;
+  }
+}
+@media (max-width: 320px) {
+  main {
+    flex-direction: column;
+  }
+  .cards {
+    width: 100vw;
+    height: 80vw;
+  }
+  .cards .card-two {
+    top: 30px;
+    transform: translate(-50%, 0);
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .cards .card-two .card-front {
+    margin-right: 60px;
+    margin-top: -72px;
+    z-index: 2;
+  }
+  .cards .card-two .card-back {
+    margin-left: 40px;
+    z-index: 1;
+  }
+  .container-formulario {
+    width: 100vw;
+  }
+}
+@media (max-width: 320px) {
+  .container-formulario .formulario .input-expDate .mes, .container-formulario .formulario .input-expDate .ano {
+    width: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

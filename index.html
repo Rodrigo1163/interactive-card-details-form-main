@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>card details form</title>
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/script.js" defer></script>
+</head>
+<body>
+
+  <main>
+    <div class="cards">
+      <div class="bg-card"></div>
+      
+      <div class="card-two">
+          <div class="card-front">
+            <div class="circle">
+              <div class="circleMedio">
+  
+              </div>
+              <div class="circleSmall">
+  
+              </div>
+            </div>
+            <p class="number-card">0000 0000 0000 0000</p>
+            <div class="nameVenc">
+              <p class="spanName">Jane Appleseed</p>
+              <p><span class="spanMes">00</span>/<span class="spanAno">00</span></p>
+            </div>
+          </div>
+          <div class="card-back">
+            <p class="number-cvc">000</p>
+          </div>
+      
+        </div>
+    
+    </div>
+    
+    <div class="container-formulario">
+      <form action="/" class="formulario">
+        <label for="">Cardholder Name</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" class="nameCard validar">
+
+        <label for="">Card Number</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-number validar" maxlength="16">
+
+        <div class="container-input">
+          <div class="expDate">
+            <label for="">EXP.DATE (MM/YY)</label>
+            <div class="containerErroDate">
+              <div class="input-expDate">
+                <input type="text" placeholder="MM" class="mes validarDate" maxlength="2">
+                <input type="text" placeholder="YY" class="ano validarDate" maxlength="2">
+              </div>
+              <span class="erroDate"></span>
+            </div>
+
+          </div>
+          <div class="cvc">
+            <label for="">CVC</label>
+            <input type="text" placeholder="e.g. 123" class="input-cvc validar" maxlength="3">
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
