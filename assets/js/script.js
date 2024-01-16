@@ -122,9 +122,6 @@ class ValidaFormulario{
             span.innerText = '0000 0000 0000 0000';
         }
         
-        let valorAtual = event.target.value;
-        let valorFormatado =  this.mascaraNum(input);
-        event.target.value = valorFormatado;
         
         
         
