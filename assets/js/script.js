@@ -57,7 +57,7 @@ class ValidaFormulario{
         this.criaErro(this.formulario.querySelector('.card-number'), "Wrong format, numbers only");
         valid = false;
     }   
-    if(!this.formulario.querySelector('.nameCard').value.match(/^[a-zA-Z]+$/g) && this.formulario.querySelector('.nameCard').value){
+    if(this.formulario.querySelector('.nameCard').value){
         
         this.criaErro(this.formulario.querySelector('.nameCard'), "Wrong format, letters only");
         valid = false;
