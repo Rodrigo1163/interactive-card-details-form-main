@@ -135,7 +135,6 @@ class ValidaFormulario{
         num=num.replace(/(\d{4})(\d)/,"$1  $2")
         num=num.replace(/(\d{4})(\d)/,"$1  $2")
         num=num.replace(/(\d{4})(\d)/,"$1  $2")
-        console.log(num)
         return num
     }
     copiaDataMM(input, span){
