@@ -98,9 +98,9 @@ class ValidaFormulario{
         const spanCVC = document.querySelector('.number-cvc');
         
         
-        this.formulario.addEventListener('input', () => {
+        this.formulario.addEventListener('input', (event) => {
             this.copiaNome(inputNome.value, spanNome);
-            this.copiaNum(inputNum.value, spanNum);
+            this.copiaNum(inputNum.value, spanNum, event);
             this.copiaDataMM(inputMM.value, spanMM);
             this.copiaDataYY(inputYY.value, spanYY);
             this.copiaCVC(inputCVC.value, spanCVC);
@@ -114,12 +114,29 @@ class ValidaFormulario{
             span.innerText = 'Jane Appleseed';
         }
     }
-    copiaNum(input, span){
-        let numeroFormatado = input.slice(0, 4) + "  " + input.slice(4, 8) + "  " + input.slice(8, 12) + "  " + input.slice(12, 16);
-        span.innerText = numeroFormatado;
+    copiaNum(input, span, event){
+        
+        span.innerText = this.mascaraNum(input);
+        
         if(input.length == '0'){
             span.innerText = '0000 0000 0000 0000';
         }
+        
+        let valorAtual = event.target.value;
+        let valorFormatado =  this.mascaraNum(input);
+        event.target.value = valorFormatado;
+        
+        
+        
+    }
+    mascaraNum(num){
+        num=num.replace(/\D/g,"")
+        num=num.replace(/(\d{4})(\d)/,"$1  $2")
+        num=num.replace(/(\d{4})(\d)/,"$1  $2")
+        num=num.replace(/(\d{4})(\d)/,"$1  $2")
+        num=num.replace(/(\d{4})(\d)/,"$1  $2")
+        console.log(num)
+        return num
     }
     copiaDataMM(input, span){
         span.innerText = input;
@@ -139,6 +156,7 @@ class ValidaFormulario{
             span.innerText = '000';
         }
     }
+
     
 }
 
