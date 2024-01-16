@@ -47,16 +47,16 @@
         <label for="name">Cardholder Name</label>
         <input type="text" placeholder="e.g. Jane Appleseed" class="nameCard validar" id="name" name="name" required>
 
-        <label for="numero">Card Number</label>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-number validar" maxlength="22" id="numero">
+        <label for="namber">Card Number</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-number validar" maxlength="22" id="number" name="number" >
 
         <div class="container-input">
           <div class="expDate">
             <label for="">EXP.DATE (MM/YY)</label>
             <div class="containerErroDate">
               <div class="input-expDate">
-                <input type="text" placeholder="MM" class="mes validarDate" maxlength="2">
-                <input type="text" placeholder="YY" class="ano validarDate" maxlength="2">
+                <input type="text" placeholder="MM" class="mes validarDate" maxlength="2" id="month" name="month">
+                <input type="text" placeholder="YY" class="ano validarDate" maxlength="2" id="year" name="year">
               </div>
               <span class="erroDate"></span>
             </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="cvc">
             <label for="">CVC</label>
-            <input type="text" placeholder="e.g. 123" class="input-cvc validar" maxlength="3">
+            <input type="text" placeholder="e.g. 123" class="input-cvc validar" maxlength="3" id="cvc" name="cvc">
           </div>
         </div>
         <button type="submit">Confirm</button>
